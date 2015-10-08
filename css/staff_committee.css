@@ -1,0 +1,39 @@
+/* Committee Styles */
+/* Sidebar Minutes Block */
+.view-sc-minutes .view-footer,
+.view-sc-minutes .view-footer .more-link {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.view-sc-minutes .more-link a:hover {
+  text-decoration: underline;
+}
+
+/* Sidebar Pages toc */
+.committee-toc li {list-style-type: none;}
+.committee-toc a {
+  background: transparent url(/misc/menu-leaf.png) no-repeat 4px 5px;
+  margin-left: -21px;
+  padding-left: 1.5em;
+}
+.committee-toc a.active {
+  background: url(/misc/message-16-ok.png) no-repeat left 0;
+}
+
+/* Committee Related Documents content */
+.field-name-field-related-documents {
+  margin-top: 26px;
+}
+.field-name-field-related-documents .field-label {
+  font-size: 31.5px;
+  font-weight: 500;
+  line-height: 1.3em;
+}
+
+/* Breadcrumb hide */
+.node-type-committee-parent-page #breadcrumb,
+.node-type-committee-child-page #breadcrumb,
+.page-committees #breadcrumb {
+  display: none;
+}

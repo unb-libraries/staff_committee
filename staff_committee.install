@@ -1,0 +1,255 @@
+<?php
+/**
+ * @file
+ * staff_committee.install
+ */
+
+/**
+ * Implements hook_enable().
+ */
+function staff_committee_enable() {
+/**
+ * Set Comments settings | Default comment setting for new content = Closed
+ */
+  variable_set('comment_committee_announcements', 1);
+  variable_set('comment_committee_child_page', 1);
+  variable_set('comment_committee_parent_page', 1);
+
+/**
+ * Set Parent Page Menu settings | Available menus = Navigation
+ */
+  variable_set('menu_options_committee_parent_page', array(
+      0 => 'navigation',
+    )
+  );
+
+/**
+ * Set Parent Page Menu settings | Default parent item = Navigation
+ */
+  $parent_menu = 'navigation:' . '0'; // Ideally, mlid for Committees
+  variable_set('menu_parent_committee_parent_page', array(
+      0 => $parent_menu,
+    )
+  );
+
+/**
+ * Set Publishing options | Published = checked
+ */
+  variable_set('node_options_committee_announcements', array(
+      0 => 'status',
+    )
+  );
+  variable_set('node_options_committee_child_page', array(
+      0 => 'status',
+    )
+  );
+  variable_set('node_options_committee_parent_page', array(
+      0 => 'status',
+    )
+  );
+
+/**
+ * Set Display settings | Display author and date information = unchecked
+ */
+  variable_set('node_submitted_committee_announcements', 1);
+  variable_set('node_submitted_committee_child_page', 0);
+  variable_set('node_submitted_committee_parent_page', 0);
+
+/**
+ * Set Pathauto URL Alias patterns
+ */
+  variable_set('pathauto_node_committee_announcements_pattern', '/committees/[node:field_committee_or_publication]/announcements/[node:title]');
+  variable_set('pathauto_node_committee_child_page_pattern', '/committees/[node:field_committee_or_publication]/[node:title]');
+  variable_set('pathauto_node_committee_parent_page_pattern', '/committees/[node:field_committee_or_publication]');
+
+/**
+ * Set committee views block settings, eg. regions and pages
+ */
+  $blocks = array(
+    array(
+      'delta' => 'sc_announcements-block_cd',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => "committees/collections-development",
+      'region' => 'content_upper',
+      'status' => TRUE,
+      'weight' => 0,
+      'module' => 'views',
+      'theme' => 'staff_lib_unb_ca',
+    ),
+    array(
+      'delta' => 'sc_announcements-block_isc',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => "committees/instructional-services-committee",
+      'region' => 'content_upper',
+      'status' => TRUE,
+      'weight' => 0,
+      'module' => 'views',
+      'theme' => 'staff_lib_unb_ca',
+    ),
+    array(
+      'delta' => 'sc_announcements-block_lb',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => "committees/library-board",
+      'region' => 'content_upper',
+      'status' => TRUE,
+      'weight' => 0,
+      'module' => 'views',
+      'theme' => 'staff_lib_unb_ca',
+    ),
+    array(
+      'delta' => 'sc_announcements-block_psc',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => "committees/public-service-committee",
+      'region' => 'content_upper',
+      'status' => TRUE,
+      'weight' => 0,
+      'module' => 'views',
+      'theme' => 'staff_lib_unb_ca',
+    ),
+    array(
+      'delta' => 'sc_announcements-block_sac',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => "committees/student-advisory-council",
+      'region' => 'content_upper',
+      'status' => TRUE,
+      'weight' => 0,
+      'module' => 'views',
+      'theme' => 'staff_lib_unb_ca',
+    ),
+    array(
+      'delta' => 'sc_announcements-block_stdc',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => "committees/staff-training-development-committee",
+      'region' => 'content_upper',
+      'status' => TRUE,
+      'weight' => 0,
+      'module' => 'views',
+      'theme' => 'staff_lib_unb_ca',
+    ),
+    array(
+      'delta' => 'sc_announcements-block_werc',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => "committees/web-electronic-resources-committee",
+      'region' => 'content_upper',
+      'status' => TRUE,
+      'weight' => 0,
+      'module' => 'views',
+      'theme' => 'staff_lib_unb_ca',
+    ),
+    array(
+      'delta' => 'sc_minutes-block_cd',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => "committees/collections-development",
+      'region' => 'sidebar_second',
+      'status' => TRUE,
+      'weight' => 10,
+      'module' => 'views',
+      'theme' => 'staff_lib_unb_ca',
+    ),
+    array(
+      'delta' => 'sc_minutes-block_isc',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => "committees/instructional-services-committee",
+      'region' => 'sidebar_second',
+      'status' => TRUE,
+      'weight' => 10,
+      'module' => 'views',
+      'theme' => 'staff_lib_unb_ca',
+    ),
+    array(
+      'delta' => 'sc_minutes-block_lb',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => "committees/library-board",
+      'region' => 'sidebar_second',
+      'status' => TRUE,
+      'weight' => 10,
+      'module' => 'views',
+      'theme' => 'staff_lib_unb_ca',
+    ),
+    array(
+      'delta' => 'sc_minutes-block_psc',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => "committees/public-service-committee",
+      'region' => 'sidebar_second',
+      'status' => TRUE,
+      'weight' => 10,
+      'module' => 'views',
+      'theme' => 'staff_lib_unb_ca',
+    ),
+    array(
+      'delta' => 'sc_minutes-block_sac',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => "committees/student-advisory-council",
+      'region' => 'sidebar_second',
+      'status' => TRUE,
+      'weight' => 10,
+      'module' => 'views',
+      'theme' => 'staff_lib_unb_ca',
+    ),
+    array(
+      'delta' => 'sc_minutes-block_stdc',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => "committees/staff-training-development-committee",
+      'region' => 'sidebar_second',
+      'status' => TRUE,
+      'weight' => 10,
+      'module' => 'views',
+      'theme' => 'staff_lib_unb_ca',
+    ),
+    array(
+      'delta' => 'sc_minutes-block_werc',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => "committees/web-electronic-resources-committee",
+      'region' => 'sidebar_second',
+      'status' => TRUE,
+      'weight' => 10,
+      'module' => 'views',
+      'theme' => 'staff_lib_unb_ca',
+    ),
+    array(
+      'delta' => 'sc_toc_links-block',
+      'visibility' => BLOCK_VISIBILITY_NOTLISTED,
+      'pages' => "",
+      'region' => 'sidebar_second',
+      'status' => TRUE,
+      'weight' => 15,
+      'module' => 'views',
+      'theme' => 'staff_lib_unb_ca',
+    ),
+  );
+  $administrationTheme = variable_get('admin_theme');
+  foreach($blocks as $block){
+    // Need to set visibility for admin theme for block UI.
+    if ($administrationTheme != $block['theme']) {
+      db_merge('block')
+        ->key(array(
+          'module' => $block['module'],
+          'delta'=> $block['delta'],
+          'theme'=> $administrationTheme
+        ))
+        ->fields(array(
+          'status' => $block['status'],
+          'weight' => $block['weight'],
+          'region' => $block['region'],
+          'visibility' => $block['visibility'],
+          'pages' => $block['pages'],
+        ))
+        ->execute();
+    }
+    db_merge('block')
+      ->key(array(
+        'module' => $block['module'],
+        'delta'=> $block['delta'],
+        'theme' => $block['theme']
+      ))
+      ->fields(array(
+        'status' => $block['status'],
+        'weight' => $block['weight'],
+        'region' => $block['region'],
+        'visibility' => $block['visibility'],
+        'pages' => $block['pages'],
+      ))
+      ->execute();
+  }
+
+}
