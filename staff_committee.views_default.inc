@@ -25,6 +25,7 @@ function staff_committee_views_default_views() {
   $handler->display->display_options['title'] = 'Announcements';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'More news posts ';
+  $handler->display->display_options['link_display'] = 'page_1';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -602,6 +603,148 @@ function staff_committee_views_default_views() {
     'WERC' => 'WERC',
   );
   $handler->display->display_options['path'] = 'committees/web-electronic-resources-committee/announcements';
+
+  /* Display: Announcements Block: LMG */
+  $handler = $view->new_display('block', 'Announcements Block: LMG', 'block_1');
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'All announcements';
+  $handler->display->display_options['defaults']['link_display'] = FALSE;
+  $handler->display->display_options['link_display'] = 'page_1';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'committee_announcements' => 'committee_announcements',
+  );
+  /* Filter criterion: Content: Select Committee (field_committee_or_publication) */
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['id'] = 'field_committee_or_publication_value';
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['table'] = 'field_data_field_committee_or_publication';
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['field'] = 'field_committee_or_publication_value';
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['value'] = array(
+    'LMG' => 'LMG',
+  );
+  $handler->display->display_options['block_description'] = 'Committee Announcements Block: LMG';
+
+  /* Display: Announcements Page: LMG */
+  $handler = $view->new_display('page', 'Announcements Page: LMG', 'page_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '25';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'committee_announcements' => 'committee_announcements',
+  );
+  /* Filter criterion: Content: Select Committee (field_committee_or_publication) */
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['id'] = 'field_committee_or_publication_value';
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['table'] = 'field_data_field_committee_or_publication';
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['field'] = 'field_committee_or_publication_value';
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['value'] = array(
+    'LMG' => 'LMG',
+  );
+  $handler->display->display_options['path'] = 'committees/library-management-group/announcements';
+
+  /* Display: Announcements Block: SLC */
+  $handler = $view->new_display('block', 'Announcements Block: SLC', 'block_2');
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'All announcements';
+  $handler->display->display_options['defaults']['link_display'] = FALSE;
+  $handler->display->display_options['link_display'] = 'page_2';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'committee_announcements' => 'committee_announcements',
+  );
+  /* Filter criterion: Content: Select Committee (field_committee_or_publication) */
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['id'] = 'field_committee_or_publication_value';
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['table'] = 'field_data_field_committee_or_publication';
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['field'] = 'field_committee_or_publication_value';
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['value'] = array(
+    'SLC' => 'SLC',
+  );
+  $handler->display->display_options['block_description'] = 'Committee Announcements Block: SLC';
+
+  /* Display: Announcements Page: SLC */
+  $handler = $view->new_display('page', 'Announcements Page: SLC', 'page_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '25';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'committee_announcements' => 'committee_announcements',
+  );
+  /* Filter criterion: Content: Select Committee (field_committee_or_publication) */
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['id'] = 'field_committee_or_publication_value';
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['table'] = 'field_data_field_committee_or_publication';
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['field'] = 'field_committee_or_publication_value';
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['value'] = array(
+    'SLC' => 'SLC',
+  );
+  $handler->display->display_options['path'] = 'committees/senate-library-committee/announcements';
   $export['sc_announcements'] = $view;
 
   $view = new view();
@@ -621,7 +764,7 @@ function staff_committee_views_default_views() {
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'more minutes';
-  $handler->display->display_options['link_display'] = 'page_3';
+  $handler->display->display_options['link_display'] = 'page_lb';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -733,7 +876,7 @@ function staff_committee_views_default_views() {
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'All committee minutes';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
-  $handler->display->display_options['link_display'] = 'page_1';
+  $handler->display->display_options['link_display'] = 'page_cd';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
@@ -787,7 +930,7 @@ function staff_committee_views_default_views() {
   $handler->display->display_options['fields']['field_minutes_file']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_minutes_file']['type'] = 'file_url_plain';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  $handler->display->display_options['block_description'] = 'Meetings Minutes Block: CD';
+  $handler->display->display_options['block_description'] = 'Committee Minutes: CD';
 
   /* Display: Minutes Page: CD */
   $handler = $view->new_display('page', 'Minutes Page: CD', 'page_cd');
@@ -861,7 +1004,7 @@ function staff_committee_views_default_views() {
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'All committee minutes';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
-  $handler->display->display_options['link_display'] = 'page_2';
+  $handler->display->display_options['link_display'] = 'page_isc';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
@@ -945,7 +1088,7 @@ function staff_committee_views_default_views() {
   $handler->display->display_options['filters']['field_committee_or_publication_value']['value'] = array(
     'ISC' => 'ISC',
   );
-  $handler->display->display_options['block_description'] = 'Meetings Minutes Block: ISC';
+  $handler->display->display_options['block_description'] = 'Committee Minutes: ISC';
 
   /* Display: Minutes Page: ISC */
   $handler = $view->new_display('page', 'Minutes Page: ISC', 'page_isc');
@@ -1041,6 +1184,8 @@ function staff_committee_views_default_views() {
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'All committee minutes';
+  $handler->display->display_options['defaults']['link_display'] = FALSE;
+  $handler->display->display_options['link_display'] = 'page_lb';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
@@ -1117,7 +1262,7 @@ function staff_committee_views_default_views() {
   $handler->display->display_options['filters']['field_committee_or_publication_value']['value'] = array(
     'LB' => 'LB',
   );
-  $handler->display->display_options['block_description'] = 'Meetings Minutes Block: LB';
+  $handler->display->display_options['block_description'] = 'Committee Minutes: LB';
 
   /* Display: Minutes Page: LB */
   $handler = $view->new_display('page', 'Minutes Page: LB', 'page_lb');
@@ -1214,7 +1359,7 @@ function staff_committee_views_default_views() {
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'All committee minutes';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
-  $handler->display->display_options['link_display'] = 'page_4';
+  $handler->display->display_options['link_display'] = 'page_psc';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
@@ -1291,7 +1436,7 @@ function staff_committee_views_default_views() {
   $handler->display->display_options['filters']['field_committee_or_publication_value']['value'] = array(
     'PSC' => 'PSC',
   );
-  $handler->display->display_options['block_description'] = 'Meetings Minutes Block: PSC';
+  $handler->display->display_options['block_description'] = 'Committee Minutes: PSC';
 
   /* Display: Minutes Page: PSC */
   $handler = $view->new_display('page', 'Minutes Page: PSC', 'page_psc');
@@ -1388,7 +1533,7 @@ function staff_committee_views_default_views() {
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'All committee minutes';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
-  $handler->display->display_options['link_display'] = 'page_5';
+  $handler->display->display_options['link_display'] = 'page_sac';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
@@ -1468,7 +1613,7 @@ function staff_committee_views_default_views() {
   $handler->display->display_options['filters']['field_committee_or_publication_value']['value'] = array(
     'SAC' => 'SAC',
   );
-  $handler->display->display_options['block_description'] = 'Meetings Minutes Block: SAC';
+  $handler->display->display_options['block_description'] = 'Committee Minutes: SAC';
 
   /* Display: Minutes Page: SAC */
   $handler = $view->new_display('page', 'Minutes Page: SAC', 'page_sac');
@@ -1565,7 +1710,7 @@ function staff_committee_views_default_views() {
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'All committee minutes';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
-  $handler->display->display_options['link_display'] = 'page_6';
+  $handler->display->display_options['link_display'] = 'page_stdc';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
@@ -1642,7 +1787,7 @@ function staff_committee_views_default_views() {
   $handler->display->display_options['filters']['field_committee_or_publication_value']['value'] = array(
     'STDC' => 'STDC',
   );
-  $handler->display->display_options['block_description'] = 'Meetings Minutes Block: STDC';
+  $handler->display->display_options['block_description'] = 'Committee Minutes: STDC';
 
   /* Display: Minutes Page: STDC */
   $handler = $view->new_display('page', 'Minutes Page: STDC', 'page_stdc');
@@ -1739,7 +1884,7 @@ function staff_committee_views_default_views() {
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'All committee minutes';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
-  $handler->display->display_options['link_display'] = 'page_7';
+  $handler->display->display_options['link_display'] = 'page_werc';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
@@ -1816,7 +1961,7 @@ function staff_committee_views_default_views() {
   $handler->display->display_options['filters']['field_committee_or_publication_value']['value'] = array(
     'WERC' => 'WERC',
   );
-  $handler->display->display_options['block_description'] = 'Meetings Minutes Block: WERC';
+  $handler->display->display_options['block_description'] = 'Committee Minutes: WERC';
 
   /* Display: Minutes Page: WERC */
   $handler = $view->new_display('page', 'Minutes Page: WERC', 'page_werc');
@@ -1901,6 +2046,356 @@ function staff_committee_views_default_views() {
     'WERC' => 'WERC',
   );
   $handler->display->display_options['path'] = 'committees/web-electronic-resources-committee/meeting-minutes';
+
+  /* Display: Minutes Block: LMG */
+  $handler = $view->new_display('block', 'Minutes Block: LMG', 'block_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['enabled'] = FALSE;
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'All committee minutes';
+  $handler->display->display_options['defaults']['link_display'] = FALSE;
+  $handler->display->display_options['link_display'] = 'page_1';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'title' => 'title',
+    'field_minutes_file' => 'field_minutes_file',
+    'edit_node' => 'edit_node',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_minutes_file' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'edit_node' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: File in PDF format */
+  $handler->display->display_options['fields']['field_minutes_file']['id'] = 'field_minutes_file';
+  $handler->display->display_options['fields']['field_minutes_file']['table'] = 'field_data_field_minutes_file';
+  $handler->display->display_options['fields']['field_minutes_file']['field'] = 'field_minutes_file';
+  $handler->display->display_options['fields']['field_minutes_file']['label'] = '';
+  $handler->display->display_options['fields']['field_minutes_file']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_minutes_file']['alter']['text'] = '<a href="[field_minutes_file]" target="_blank">[title]</a>';
+  $handler->display->display_options['fields']['field_minutes_file']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_minutes_file']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_minutes_file']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_minutes_file']['type'] = 'file_url_plain';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'meeting_minutes' => 'meeting_minutes',
+  );
+  /* Filter criterion: Content: Select Committee (field_committee_or_publication) */
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['id'] = 'field_committee_or_publication_value';
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['table'] = 'field_data_field_committee_or_publication';
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['field'] = 'field_committee_or_publication_value';
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['value'] = array(
+    'LMG' => 'LMG',
+  );
+  $handler->display->display_options['block_description'] = 'Committee Minutes: LMG';
+
+  /* Display: Minutes Page: LMG */
+  $handler = $view->new_display('page', 'Minutes Page: LMG', 'page_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['enabled'] = FALSE;
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'more minutes';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '25';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<h1>Meeting Minutes: [field_committee_or_publication]</h1>';
+  $handler->display->display_options['header']['area']['format'] = 'html';
+  $handler->display->display_options['header']['area']['tokenize'] = TRUE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: File in PDF format */
+  $handler->display->display_options['fields']['field_minutes_file']['id'] = 'field_minutes_file';
+  $handler->display->display_options['fields']['field_minutes_file']['table'] = 'field_data_field_minutes_file';
+  $handler->display->display_options['fields']['field_minutes_file']['field'] = 'field_minutes_file';
+  $handler->display->display_options['fields']['field_minutes_file']['label'] = '';
+  $handler->display->display_options['fields']['field_minutes_file']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_minutes_file']['alter']['text'] = '<a href="[field_minutes_file]" target="_blank">[title]</a>';
+  $handler->display->display_options['fields']['field_minutes_file']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_minutes_file']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_minutes_file']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_minutes_file']['type'] = 'file_url_plain';
+  /* Field: Content: Edit link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['label'] = '';
+  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['edit_node']['hide_empty'] = TRUE;
+  /* Field: Content: Select Committee */
+  $handler->display->display_options['fields']['field_committee_or_publication']['id'] = 'field_committee_or_publication';
+  $handler->display->display_options['fields']['field_committee_or_publication']['table'] = 'field_data_field_committee_or_publication';
+  $handler->display->display_options['fields']['field_committee_or_publication']['field'] = 'field_committee_or_publication';
+  $handler->display->display_options['fields']['field_committee_or_publication']['label'] = '';
+  $handler->display->display_options['fields']['field_committee_or_publication']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_committee_or_publication']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_committee_or_publication']['element_default_classes'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'meeting_minutes' => 'meeting_minutes',
+  );
+  /* Filter criterion: Content: Select Committee (field_committee_or_publication) */
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['id'] = 'field_committee_or_publication_value';
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['table'] = 'field_data_field_committee_or_publication';
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['field'] = 'field_committee_or_publication_value';
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['value'] = array(
+    'LMG' => 'LMG',
+  );
+  $handler->display->display_options['path'] = 'committees/library-management-group/meeting-minutes';
+
+  /* Display: Minutes Block: SLC */
+  $handler = $view->new_display('block', 'Minutes Block: SLC', 'block_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'All committee minutes';
+  $handler->display->display_options['defaults']['link_display'] = FALSE;
+  $handler->display->display_options['link_display'] = 'page_2';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'title' => 'title',
+    'field_minutes_file' => 'field_minutes_file',
+    'edit_node' => 'edit_node',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_minutes_file' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'edit_node' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: File in PDF format */
+  $handler->display->display_options['fields']['field_minutes_file']['id'] = 'field_minutes_file';
+  $handler->display->display_options['fields']['field_minutes_file']['table'] = 'field_data_field_minutes_file';
+  $handler->display->display_options['fields']['field_minutes_file']['field'] = 'field_minutes_file';
+  $handler->display->display_options['fields']['field_minutes_file']['label'] = '';
+  $handler->display->display_options['fields']['field_minutes_file']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_minutes_file']['alter']['text'] = '<a href="[field_minutes_file]" target="_blank">[title]</a>';
+  $handler->display->display_options['fields']['field_minutes_file']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_minutes_file']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_minutes_file']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_minutes_file']['type'] = 'file_url_plain';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'meeting_minutes' => 'meeting_minutes',
+  );
+  /* Filter criterion: Content: Select Committee (field_committee_or_publication) */
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['id'] = 'field_committee_or_publication_value';
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['table'] = 'field_data_field_committee_or_publication';
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['field'] = 'field_committee_or_publication_value';
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['value'] = array(
+    'SLC' => 'SLC',
+  );
+  $handler->display->display_options['block_description'] = 'Committee Minutes: SLC';
+
+  /* Display: Minutes Page: SLC */
+  $handler = $view->new_display('page', 'Minutes Page: SLC', 'page_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'more minutes';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '25';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<h1>Meeting Minutes: [field_committee_or_publication]</h1>';
+  $handler->display->display_options['header']['area']['format'] = 'html';
+  $handler->display->display_options['header']['area']['tokenize'] = TRUE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: File in PDF format */
+  $handler->display->display_options['fields']['field_minutes_file']['id'] = 'field_minutes_file';
+  $handler->display->display_options['fields']['field_minutes_file']['table'] = 'field_data_field_minutes_file';
+  $handler->display->display_options['fields']['field_minutes_file']['field'] = 'field_minutes_file';
+  $handler->display->display_options['fields']['field_minutes_file']['label'] = '';
+  $handler->display->display_options['fields']['field_minutes_file']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_minutes_file']['alter']['text'] = '<a href="[field_minutes_file]" target="_blank">[title]</a>';
+  $handler->display->display_options['fields']['field_minutes_file']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_minutes_file']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_minutes_file']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_minutes_file']['type'] = 'file_url_plain';
+  /* Field: Content: Edit link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['label'] = '';
+  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['edit_node']['hide_empty'] = TRUE;
+  /* Field: Content: Select Committee */
+  $handler->display->display_options['fields']['field_committee_or_publication']['id'] = 'field_committee_or_publication';
+  $handler->display->display_options['fields']['field_committee_or_publication']['table'] = 'field_data_field_committee_or_publication';
+  $handler->display->display_options['fields']['field_committee_or_publication']['field'] = 'field_committee_or_publication';
+  $handler->display->display_options['fields']['field_committee_or_publication']['label'] = '';
+  $handler->display->display_options['fields']['field_committee_or_publication']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_committee_or_publication']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_committee_or_publication']['element_default_classes'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'meeting_minutes' => 'meeting_minutes',
+  );
+  /* Filter criterion: Content: Select Committee (field_committee_or_publication) */
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['id'] = 'field_committee_or_publication_value';
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['table'] = 'field_data_field_committee_or_publication';
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['field'] = 'field_committee_or_publication_value';
+  $handler->display->display_options['filters']['field_committee_or_publication_value']['value'] = array(
+    'SLC' => 'SLC',
+  );
+  $handler->display->display_options['path'] = 'committees/senate-library-committee/meeting-minutes';
   $export['sc_minutes'] = $view;
 
   $view = new view();
@@ -1968,6 +2463,8 @@ elseif (strpos($uri, \'student\') !== false) {return \'SAC\';}
 elseif (strpos($uri, \'staff\') !== false) {return \'STDC\';}
 elseif (strpos($uri, \'electronic\') !== false) {return \'WERC\';}
 elseif (strpos($uri, \'website\') !== false) {return \'WRC\';}
+elseif (strpos($uri, \'management\') !== false) {return \'LMG\';}
+elseif (strpos($uri, \'senate\') !== false) {return \'SLC\';}
 else {return -1;}';
   $handler->display->display_options['arguments']['field_committee_or_publication_value']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_committee_or_publication_value']['summary']['format'] = 'default_summary';
