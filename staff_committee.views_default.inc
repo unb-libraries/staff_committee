@@ -605,7 +605,7 @@ function staff_committee_views_default_views() {
   $handler->display->display_options['path'] = 'committees/web-electronic-resources-committee/announcements';
 
   /* Display: Announcements Block: LMG */
-  $handler = $view->new_display('block', 'Announcements Block: LMG', 'block_1');
+  $handler = $view->new_display('block', 'Announcements Block: LMG', 'block_lmg');
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
@@ -642,7 +642,7 @@ function staff_committee_views_default_views() {
   $handler->display->display_options['block_description'] = 'Committee Announcements Block: LMG';
 
   /* Display: Announcements Page: LMG */
-  $handler = $view->new_display('page', 'Announcements Page: LMG', 'page_1');
+  $handler = $view->new_display('page', 'Announcements Page: LMG', 'page_lmg');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'full';
@@ -676,7 +676,7 @@ function staff_committee_views_default_views() {
   $handler->display->display_options['path'] = 'committees/library-management-group/announcements';
 
   /* Display: Announcements Block: SLC */
-  $handler = $view->new_display('block', 'Announcements Block: SLC', 'block_2');
+  $handler = $view->new_display('block', 'Announcements Block: SLC', 'block_slc');
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
@@ -713,7 +713,7 @@ function staff_committee_views_default_views() {
   $handler->display->display_options['block_description'] = 'Committee Announcements Block: SLC';
 
   /* Display: Announcements Page: SLC */
-  $handler = $view->new_display('page', 'Announcements Page: SLC', 'page_2');
+  $handler = $view->new_display('page', 'Announcements Page: SLC', 'page_slc');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'full';
@@ -2048,7 +2048,7 @@ function staff_committee_views_default_views() {
   $handler->display->display_options['path'] = 'committees/web-electronic-resources-committee/meeting-minutes';
 
   /* Display: Minutes Block: LMG */
-  $handler = $view->new_display('block', 'Minutes Block: LMG', 'block_1');
+  $handler = $view->new_display('block', 'Minutes Block: LMG', 'block_lmg');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['use_more'] = FALSE;
@@ -2139,7 +2139,7 @@ function staff_committee_views_default_views() {
   $handler->display->display_options['block_description'] = 'Committee Minutes: LMG';
 
   /* Display: Minutes Page: LMG */
-  $handler = $view->new_display('page', 'Minutes Page: LMG', 'page_1');
+  $handler = $view->new_display('page', 'Minutes Page: LMG', 'page_lmg');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['use_more'] = FALSE;
@@ -2224,7 +2224,7 @@ function staff_committee_views_default_views() {
   $handler->display->display_options['path'] = 'committees/library-management-group/meeting-minutes';
 
   /* Display: Minutes Block: SLC */
-  $handler = $view->new_display('block', 'Minutes Block: SLC', 'block_2');
+  $handler = $view->new_display('block', 'Minutes Block: SLC', 'block_slc');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
@@ -2314,7 +2314,7 @@ function staff_committee_views_default_views() {
   $handler->display->display_options['block_description'] = 'Committee Minutes: SLC';
 
   /* Display: Minutes Page: SLC */
-  $handler = $view->new_display('page', 'Minutes Page: SLC', 'page_2');
+  $handler = $view->new_display('page', 'Minutes Page: SLC', 'page_slc');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
