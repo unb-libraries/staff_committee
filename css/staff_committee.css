@@ -1,9 +1,11 @@
 /* Committee Styles */
 /* Sidebar Minutes Block */
+.view-sc-minutes .more-link {
+  margin-bottom: 0;
+}
 .view-sc-minutes .view-footer,
 .view-sc-minutes .view-footer .more-link {
   border: none;
-  margin: 0;
   padding: 0;
 }
 .view-sc-minutes .more-link a:hover {
