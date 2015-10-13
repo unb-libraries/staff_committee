@@ -1,7 +1,7 @@
 name = Staff Committee
 description = Settings, fields, content types, permissions and views for Staff Committee.
 core = 7.x
-package = UNB Libraries
+package = UNB Library
 dependencies[] = meeting_minutes
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
