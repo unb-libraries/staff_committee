@@ -13,7 +13,7 @@ function staff_committee_user_default_roles() {
   // Exported role: Committee Admin.
   $roles['Committee Admin'] = array(
     'name' => 'Committee Admin',
-    'weight' => 54,
+    'weight' => 35,
   );
 
   return $roles;
