@@ -258,6 +258,7 @@ function staff_committee_enable() {
     ),
   );
   $administrationTheme = variable_get('admin_theme');
+  $administrationTheme = (is_null($administrationTheme)) ? 'bartik' : $administrationTheme;
   foreach($blocks as $block){
     // Need to set visibility for admin theme for block UI.
     if ($administrationTheme != $block['theme']) {
