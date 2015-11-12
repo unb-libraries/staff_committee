@@ -2450,7 +2450,7 @@ function staff_committee_views_default_views() {
   $handler->display->display_options['arguments']['field_committee_or_publication_value']['field'] = 'field_committee_or_publication_value';
   $handler->display->display_options['arguments']['field_committee_or_publication_value']['default_action'] = 'default';
   $handler->display->display_options['arguments']['field_committee_or_publication_value']['default_argument_type'] = 'php';
-  $handler->display->display_options['arguments']['field_committee_or_publication_value']['default_argument_options']['code'] = '$uri = $_SERVER['REQUEST_URI'];
+  $handler->display->display_options['arguments']['field_committee_or_publication_value']['default_argument_options']['code'] = '$uri = $_SERVER[REQUEST_URI];
 // only add contextual block on "committees" pages
 if (strpos($uri, \'/committees/\') === false) {return -1;}
 // $uri + contextual filter string source: Meeting Minutes > field_committee_or_publication > Select list
