@@ -779,7 +779,7 @@ function staff_committee_views_default_views() {
   $handler->display->display_options['filters']['field_committee_or_publication_value']['value'] = array(
     'COMM' => 'COMM',
   );
-  $handler->display->display_options['block_description'] = 'Committee Announcements Block: COM';
+  $handler->display->display_options['block_description'] = 'Committee Announcements Block: COMM';
 
   /* Display: Announcements Page: COMM */
   $handler = $view->new_display('page', 'Announcements Page: COMM', 'page_comm');
@@ -2554,7 +2554,7 @@ function staff_committee_views_default_views() {
   $handler->display->display_options['filters']['field_committee_or_publication_value']['value'] = array(
     'COMM' => 'COMM',
   );
-  $handler->display->display_options['block_description'] = 'Committee Minutes: COM';
+  $handler->display->display_options['block_description'] = 'Committee Minutes: COMM';
 
   /* Display: Minutes Page: COMM */
   $handler = $view->new_display('page', 'Minutes Page: COMM', 'page_comm');
