@@ -10,7 +10,7 @@
 function staff_committee_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_related_documents'
+  // Exported field_base: 'field_related_documents'.
   $field_bases['field_related_documents'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -33,7 +33,7 @@ function staff_committee_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_weight'
+  // Exported field_base: 'field_weight'.
   $field_bases['field_weight'] = array(
     'active' => 1,
     'cardinality' => 1,

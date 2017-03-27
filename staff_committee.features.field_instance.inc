@@ -11,7 +11,7 @@ function staff_committee_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:
-  // 'comment-comment_node_committee_announcements-comment_body'
+  // 'comment-comment_node_committee_announcements-comment_body'.
   $field_instances['comment-comment_node_committee_announcements-comment_body'] = array(
     'bundle' => 'comment_node_committee_announcements',
     'default_value' => NULL,
@@ -45,7 +45,7 @@ function staff_committee_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'comment-comment_node_committee_child_page-comment_body'
+  // 'comment-comment_node_committee_child_page-comment_body'.
   $field_instances['comment-comment_node_committee_child_page-comment_body'] = array(
     'bundle' => 'comment_node_committee_child_page',
     'default_value' => NULL,
@@ -79,7 +79,7 @@ function staff_committee_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'comment-comment_node_committee_parent_page-comment_body'
+  // 'comment-comment_node_committee_parent_page-comment_body'.
   $field_instances['comment-comment_node_committee_parent_page-comment_body'] = array(
     'bundle' => 'comment_node_committee_parent_page',
     'default_value' => NULL,
@@ -112,7 +112,7 @@ function staff_committee_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-committee_announcements-body'
+  // Exported field_instance: 'node-committee_announcements-body'.
   $field_instances['node-committee_announcements-body'] = array(
     'bundle' => 'committee_announcements',
     'default_value' => NULL,
@@ -158,7 +158,7 @@ function staff_committee_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-committee_announcements-field_committee_or_publication'
+  // 'node-committee_announcements-field_committee_or_publication'.
   $field_instances['node-committee_announcements-field_committee_or_publication'] = array(
     'bundle' => 'committee_announcements',
     'default_value' => NULL,
@@ -194,7 +194,7 @@ function staff_committee_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-committee_announcements-field_images'
+  // Exported field_instance: 'node-committee_announcements-field_images'.
   $field_instances['node-committee_announcements-field_images'] = array(
     'bundle' => 'committee_announcements',
     'deleted' => 0,
@@ -262,7 +262,7 @@ function staff_committee_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-committee_child_page-body'
+  // Exported field_instance: 'node-committee_child_page-body'.
   $field_instances['node-committee_child_page-body'] = array(
     'bundle' => 'committee_child_page',
     'default_value' => NULL,
@@ -308,7 +308,7 @@ function staff_committee_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-committee_child_page-field_committee_or_publication'
+  // 'node-committee_child_page-field_committee_or_publication'.
   $field_instances['node-committee_child_page-field_committee_or_publication'] = array(
     'bundle' => 'committee_child_page',
     'default_value' => array(
@@ -348,7 +348,7 @@ function staff_committee_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-committee_child_page-field_weight'
+  // Exported field_instance: 'node-committee_child_page-field_weight'.
   $field_instances['node-committee_child_page-field_weight'] = array(
     'bundle' => 'committee_child_page',
     'default_value' => array(
@@ -392,7 +392,7 @@ function staff_committee_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-committee_parent_page-body'
+  // Exported field_instance: 'node-committee_parent_page-body'.
   $field_instances['node-committee_parent_page-body'] = array(
     'bundle' => 'committee_parent_page',
     'default_value' => NULL,
@@ -438,7 +438,7 @@ function staff_committee_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-committee_parent_page-field_committee_or_publication'
+  // 'node-committee_parent_page-field_committee_or_publication'.
   $field_instances['node-committee_parent_page-field_committee_or_publication'] = array(
     'bundle' => 'committee_parent_page',
     'default_value' => NULL,
@@ -475,7 +475,7 @@ function staff_committee_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-committee_parent_page-field_related_documents'
+  // 'node-committee_parent_page-field_related_documents'.
   $field_instances['node-committee_parent_page-field_related_documents'] = array(
     'bundle' => 'committee_parent_page',
     'deleted' => 0,
@@ -539,7 +539,7 @@ function staff_committee_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-committee_parent_page-field_weight'
+  // Exported field_instance: 'node-committee_parent_page-field_weight'.
   $field_instances['node-committee_parent_page-field_weight'] = array(
     'bundle' => 'committee_parent_page',
     'default_value' => array(

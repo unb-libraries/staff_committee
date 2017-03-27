@@ -15,6 +15,7 @@ function staff_committee_user_default_permissions() {
     'name' => 'create committee_announcements content',
     'roles' => array(
       'Committee Admin' => 'Committee Admin',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -24,6 +25,7 @@ function staff_committee_user_default_permissions() {
     'name' => 'create committee_child_page content',
     'roles' => array(
       'Committee Admin' => 'Committee Admin',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -31,28 +33,36 @@ function staff_committee_user_default_permissions() {
   // Exported permission: 'create committee_parent_page content'.
   $permissions['create committee_parent_page content'] = array(
     'name' => 'create committee_parent_page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'delete any committee_announcements content'.
   $permissions['delete any committee_announcements content'] = array(
     'name' => 'delete any committee_announcements content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'delete any committee_child_page content'.
   $permissions['delete any committee_child_page content'] = array(
     'name' => 'delete any committee_child_page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'delete any committee_parent_page content'.
   $permissions['delete any committee_parent_page content'] = array(
     'name' => 'delete any committee_parent_page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -61,6 +71,7 @@ function staff_committee_user_default_permissions() {
     'name' => 'delete own committee_announcements content',
     'roles' => array(
       'Committee Admin' => 'Committee Admin',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -70,6 +81,7 @@ function staff_committee_user_default_permissions() {
     'name' => 'delete own committee_child_page content',
     'roles' => array(
       'Committee Admin' => 'Committee Admin',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -77,21 +89,27 @@ function staff_committee_user_default_permissions() {
   // Exported permission: 'delete own committee_parent_page content'.
   $permissions['delete own committee_parent_page content'] = array(
     'name' => 'delete own committee_parent_page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'edit any committee_announcements content'.
   $permissions['edit any committee_announcements content'] = array(
     'name' => 'edit any committee_announcements content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'edit any committee_child_page content'.
   $permissions['edit any committee_child_page content'] = array(
     'name' => 'edit any committee_child_page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -100,6 +118,7 @@ function staff_committee_user_default_permissions() {
     'name' => 'edit any committee_parent_page content',
     'roles' => array(
       'Committee Admin' => 'Committee Admin',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -109,6 +128,7 @@ function staff_committee_user_default_permissions() {
     'name' => 'edit own committee_announcements content',
     'roles' => array(
       'Committee Admin' => 'Committee Admin',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -118,6 +138,7 @@ function staff_committee_user_default_permissions() {
     'name' => 'edit own committee_child_page content',
     'roles' => array(
       'Committee Admin' => 'Committee Admin',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -125,7 +146,9 @@ function staff_committee_user_default_permissions() {
   // Exported permission: 'edit own committee_parent_page content'.
   $permissions['edit own committee_parent_page content'] = array(
     'name' => 'edit own committee_parent_page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
