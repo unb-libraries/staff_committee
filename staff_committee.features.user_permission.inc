@@ -117,7 +117,6 @@ function staff_committee_user_default_permissions() {
   $permissions['edit any committee_parent_page content'] = array(
     'name' => 'edit any committee_parent_page content',
     'roles' => array(
-      'Committee Admin' => 'Committee Admin',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -147,6 +146,7 @@ function staff_committee_user_default_permissions() {
   $permissions['edit own committee_parent_page content'] = array(
     'name' => 'edit own committee_parent_page content',
     'roles' => array(
+      'Committee Admin' => 'Committee Admin',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
