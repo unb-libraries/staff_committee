@@ -2825,6 +2825,7 @@ if (strpos($uri, \'/committees/\') === false) {return -1;}
 // $uri + contextual filter string source: Meeting Minutes > field_committee_or_publication > Select list
 if (strpos($uri, \'collections\') !== false) {return \'CD\';}
 elseif (strpos($uri, \'communications\') !== false) {return \'COMM\';}
+elseif (strpos($uri, \'digital\') !== false) {return \'DRSC\';}
 elseif (strpos($uri, \'instructional\') !== false) {return \'ISC\';}
 elseif (strpos($uri, \'commons\') !== false) {return \'LCSWG\';}
 elseif (strpos($uri, \'board\') !== false) {return \'LB\';}
